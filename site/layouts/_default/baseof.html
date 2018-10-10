@@ -1,14 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ $.Site.Language.Lang }}">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
-    <title>{{ $.Site.Title }}</title>
+    <title>英語 is fun!</title>
+    <link href="https://fonts.googleapis.com/css?family=Kalam:700" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
 
+    
     {{ block "header" . }}{{ partial "header" . }}{{end}}
 
     {{ block "main" . }}{{end}}
